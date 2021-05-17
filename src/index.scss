@@ -1,0 +1,26 @@
+:root {
+	--primary-pink: #ef5466;
+	--primary-grey: #52525d;
+}
+@import "./assets/fonts.scss";
+@import "./assets/sass/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Roboto&display=swap");
+@import "./assets/sass/common.scss";
+body {
+	font-family: "Roboto";
+}
+.App {
+	padding-top: 120px;
+}
+.col {
+	padding: 0 120px;
+	@media (max-width: 768px) {
+		padding: 0 60px;
+	}
+	@media (max-width: 576px) {
+		padding: 0 30px;
+	}
+	@media (max-width: 420px) {
+		padding: 0px 15px;
+	}
+}

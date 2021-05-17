@@ -1,0 +1,118 @@
+.album {
+    text-align: center;
+
+    h1 {
+        font-size: 44px;
+
+        font-weight: lighter;
+        margin-bottom: 60px;
+        .artist-link {
+            font-size: 24px;
+            font-style: italic;
+            color: var(--primary-grey);
+            font-weight: lighter;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-image {
+        margin-bottom: 30px;
+        img {
+            margin: 0 auto;
+        }
+    }
+    .rating {
+        display: inline-block;
+        font-size: 60px;
+        font-family: Times; // make sure ★ appears correctly
+        line-height: 1;
+        margin-bottom: 60px;
+        color: var(--primary-pink);
+        &-empty {
+            color: var(--primary-grey);
+        }
+    }
+    .deezer {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        a {
+            img {
+                height: 60px;
+            }
+        }
+    }
+    .tracklist {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 60px;
+        li {
+            position: relative;
+            padding: 0 120px;
+            -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.62);
+            box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.62);
+            transition: box-shadow 0.2s ease-in-out;
+            cursor: pointer;
+            .track-link {
+                display: inline-block;
+                height: 60px;
+                line-height: 60px;
+                width: 100%;
+                text-decoration: none;
+                color: black;
+            }
+            &:hover {
+                -webkit-box-shadow: inset 0px 0px 15px -10px #000000;
+                box-shadow: inset 0px 0px 15px -10px #000000;
+                transition: box-shadow 0.2s ease-in-out;
+            }
+            &:not(:first-child) {
+                // border-top: 1px solid var(--primary-grey);
+            }
+            .index,
+            .duration {
+                position: absolute;
+                font-size: 13px;
+            }
+            .duration {
+                right: 60px;
+            }
+            .index {
+                left: 60px;
+            }
+
+            @media (max-width: 768px) {
+                padding: 0 60px;
+                .duration {
+                    right: 30px;
+                }
+                .index {
+                    left: 30px;
+                }
+            }
+            @media (max-width: 576px) {
+                padding: 0 30px;
+                .duration {
+                    right: 15px;
+                }
+                .index {
+                    left: 15px;
+                }
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        &-hero {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &-image {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

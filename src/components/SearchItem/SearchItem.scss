@@ -1,0 +1,184 @@
+.search-item {
+    display: flex;
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+    &.active {
+        .image {
+            .meta-time,
+            .hearth-btn {
+                opacity: 1;
+                pointer-events: all;
+                will-change: opacity;
+                transition: 0.35s opacity ease-in-out;
+            }
+        }
+    }
+    .image {
+        position: relative;
+        height: 200px;
+        width: 200px;
+        max-width: 200px;
+        cursor: pointer;
+        .actions {
+            position: absolute;
+            display: flex;
+            bottom: 10px;
+            left: 10px;
+
+            @media (max-width: 576px) {
+                left: 50%;
+                transform: translateX(-50%);
+                justify-content: center;
+                bottom: 7px;
+                .action {
+                    margin: 0;
+                }
+            }
+            .action {
+                box-shadow: 0 1px 6px #19192217;
+                transform-origin: center;
+                &:hover {
+                    transform: scale(1.1);
+                    transition: transform 0.2s ease-in-out;
+                }
+            }
+        }
+        .track-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .meta-time {
+            opacity: 0;
+            pointer-events: none;
+            will-change: opacity;
+            transition: 0.35s opacity ease-in-out;
+            position: absolute;
+            color: white;
+            top: 10px;
+            right: 10px;
+            text-shadow: 1px 1px 1px #1919222a;
+            @media (max-width: 576px) {
+                top: 7px;
+                right: 7px;
+                font-size: 12px;
+            }
+        }
+        .hearth-btn {
+            opacity: 0;
+            pointer-events: none;
+            will-change: opacity;
+            transition: 0.35s opacity ease-in-out, 0.2s transform ease-in-out;
+            margin-left: 10px;
+        }
+        @media (max-width: 768px) {
+            .hearth-btn,
+            .meta-time {
+                opacity: 1;
+                pointer-events: none;
+                transition: none;
+            }
+        }
+        .play-btn,
+        .hearth-btn {
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: white;
+            text-align: center;
+            display: block;
+            &::before {
+                line-height: 40px;
+                color: black;
+                font-size: 12px;
+            }
+        }
+        .play-btn {
+            &::before {
+                font-size: 12px;
+            }
+        }
+
+        .hearth-btn {
+            &::before {
+                font-size: 15px;
+            }
+        }
+        img {
+            height: 200px;
+            width: 200px;
+            max-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            height: 150px;
+            width: 150px;
+            max-width: 150px;
+            img {
+                height: 150px;
+                width: 150px;
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            height: 100px;
+            width: 100px;
+            max-width: 100px;
+            img {
+                height: 100px;
+                width: 100px;
+                max-width: 100px;
+            }
+        }
+    }
+
+    .infos {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+            font-size: 24px;
+            margin: 0;
+            .album-link {
+                font-weight: lighter;
+                font-size: 14px;
+                font-style: italic;
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .artist {
+            color: var(--primary-grey);
+            font-weight: lighter;
+            font-size: 14px;
+            &-link {
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 16px;
+                .album-link {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}

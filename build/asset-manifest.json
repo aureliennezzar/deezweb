@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b83275c6.chunk.css",
+    "main.js": "/static/js/main.4c55fcc8.chunk.js",
+    "main.js.map": "/static/js/main.4c55fcc8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a3607c3c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a3607c3c.js.map",
+    "static/js/2.353dd38c.chunk.js": "/static/js/2.353dd38c.chunk.js",
+    "static/js/2.353dd38c.chunk.js.map": "/static/js/2.353dd38c.chunk.js.map",
+    "static/js/3.1611e3c5.chunk.js": "/static/js/3.1611e3c5.chunk.js",
+    "static/js/3.1611e3c5.chunk.js.map": "/static/js/3.1611e3c5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b83275c6.chunk.css.map": "/static/css/main.b83275c6.chunk.css.map",
+    "static/js/2.353dd38c.chunk.js.LICENSE.txt": "/static/js/2.353dd38c.chunk.js.LICENSE.txt",
+    "static/media/brand.99771cea.svg": "/static/media/brand.99771cea.svg",
+    "static/media/deezer.6c1a84e4.png": "/static/media/deezer.6c1a84e4.png",
+    "static/media/index.scss": "/static/media/icomoon.9ce190ee.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3607c3c.js",
+    "static/js/2.353dd38c.chunk.js",
+    "static/css/main.b83275c6.chunk.css",
+    "static/js/main.4c55fcc8.chunk.js"
+  ]
+}

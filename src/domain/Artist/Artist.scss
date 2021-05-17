@@ -1,0 +1,21 @@
+.artist {
+    &-wrapper {
+        text-align: center;
+        display: flex;
+    }
+    &-name {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    &-image {
+        .cover {
+            border-radius: 50% !important;
+            margin: 0 auto;
+        }
+    }
+    .infos{
+        p{
+            margin-bottom: 30px;
+        }
+    }
+}

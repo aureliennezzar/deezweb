@@ -1,0 +1,37 @@
+.notfound {
+    text-align: center;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .title {
+        font-size: 45px;
+        letter-spacing: 0.2rem;
+        animation: scale 3s ease-in-out infinite alternate;
+        font-family: "Roboto";
+        .quote{
+            margin: 0 30px;
+            font-size: 70px;
+            font-family: "Ubuntu";
+        }
+    }
+    .icon-volume{
+        position: absolute;
+        display: block;
+        transform: rotate(-15deg);
+        left: -20px;
+        &:before{
+            font-size: 600px;
+            color: rgba(0, 0, 0, 0.08);
+        }
+    }
+    @keyframes scale {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.1);
+        }
+    }
+}

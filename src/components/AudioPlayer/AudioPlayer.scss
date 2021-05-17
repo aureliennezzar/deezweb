@@ -1,0 +1,215 @@
+.audio-player {
+    width: 100%;
+    user-select: none;
+    .track-infos {
+        span,
+        h2 {
+            display: inline-block;
+        }
+        h2 {
+            // font-size: 24px;
+            margin-right: 5px;
+        }
+        span {
+            font-size: 14px;
+            margin-left: 5px;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 16px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+    .seek-bar {
+        width: 100%;
+        height: 2px;
+        background-color: grey;
+        display: flex;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .time {
+        line-height: 32px;
+        font-size: 14px;
+    }
+    .fill {
+        height: 100%;
+        background-color: var(--primary-pink);
+    }
+    .handle {
+        display: none;
+        width: 10px;
+        height: 10px;
+        background-color: var(--primary-pink);
+        border-radius: 50%;
+        margin-left: -5px;
+        transform: translateY(-2px);
+    }
+    .controller {
+        display: flex;
+        align-items: center;
+        &:hover {
+            .seek-bar {
+                height: 5px;
+                padding: 0;
+                .handle {
+                    display: block;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .seek-bar {
+                height: 5px;
+                padding: 0;
+                .handle {
+                    display: block;
+                }
+            }
+        }
+        .volume,
+        .control,
+        .forward,
+        .rewind {
+            cursor: pointer;
+            height: 32px;
+            width: 32px;
+            line-height: 32px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background 0.35s ease-in-out;
+            border-radius: 10px;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.03);
+                transition: background 0.35s ease-in-out;
+            }
+            @media (max-width: 768px) {
+                &:hover {
+                    background-color: none;
+                    transition: none;
+                }
+            }
+        }
+        .volume {
+            margin-left: 20px;
+            position: relative;
+            &:hover {
+                div {
+                    display: block;
+                }
+            }
+            div {
+                position: absolute;
+                padding: 5px 0;
+                width: 130px;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -40px;
+                display: none;
+                input[type="range"] {
+                    width: 100%;
+                    margin: 3px 0;
+                    background-color: transparent;
+                    -webkit-appearance: none;
+                }
+                input[type="range"]:focus {
+                    outline: none;
+                }
+                input[type="range"]::-webkit-slider-runnable-track {
+                    background: #928483;
+                    border: 0;
+                    border-radius: 8.1px;
+                    width: 100%;
+                    height: 4px;
+                    cursor: pointer;
+                }
+                input[type="range"]::-webkit-slider-thumb {
+                    margin-top: -3px;
+                    width: 10px;
+                    height: 10px;
+                    background: #000000;
+                    border: 0;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                }
+                input[type="range"]:focus::-webkit-slider-runnable-track {
+                    background: #aca2a1;
+                }
+                input[type="range"]::-moz-range-track {
+                    background: #928483;
+                    border: 0;
+                    border-radius: 8.1px;
+                    width: 100%;
+                    height: 4px;
+                    cursor: pointer;
+                }
+                input[type="range"]::-moz-range-thumb {
+                    width: 10px;
+                    height: 10px;
+                    background: #000000;
+                    border: 0;
+                    border-radius: 50px;
+                    cursor: pointer;
+                }
+                input[type="range"]::-ms-track {
+                    background: transparent;
+                    border-color: transparent;
+                    border-width: 4px 0;
+                    color: transparent;
+                    width: 100%;
+                    height: 4px;
+                    cursor: pointer;
+                }
+                input[type="range"]::-ms-fill-lower {
+                    background: #766867;
+                    border: 0;
+                    border-radius: 16.2px;
+                }
+                input[type="range"]::-ms-fill-upper {
+                    background: #928483;
+                    border: 0;
+                    border-radius: 16.2px;
+                }
+                input[type="range"]::-ms-thumb {
+                    width: 10px;
+                    height: 10px;
+                    background: #000000;
+                    border: 0;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    margin-top: 0px;
+                    /*Needed to keep the Edge thumb centred*/
+                }
+                input[type="range"]:focus::-ms-fill-lower {
+                    background: #928483;
+                }
+                input[type="range"]:focus::-ms-fill-upper {
+                    background: #aca2a1;
+                }
+                /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+                  how to remove the virtical space around the range input in IE*/
+                @supports (-ms-ime-align: auto) {
+                    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+                    input[type="range"] {
+                        margin: 0;
+                        /*Edge starts the margin from the thumb, not the track as other browsers do*/
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+                div {
+                    display: block !important;
+                }
+            }
+        }
+        .control {
+            margin-right: 20px;
+        }
+    }
+}

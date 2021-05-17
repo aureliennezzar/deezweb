@@ -1,0 +1,28 @@
+.tabs {
+    ul {
+        padding: 0;
+        display: flex;
+        list-style: none;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 50px;
+        @media (max-width: 768px) {
+            padding: 0 40px;
+            .tab {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 576px) {
+            padding: 0 30px;
+        }
+        @media (max-width: 420px) {
+            padding: 0px 15px;
+        }
+        .tab {
+            cursor: pointer;
+            &.active {
+                color: red;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.trackpage {
+    .trackinfos {
+        display: flex;
+
+        .album-link,
+        .artist-link {
+            text-decoration: none;
+            font-size: 16px;
+            color: var(--primary-grey);
+            font-style: italic;
+            font-weight: lighter;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .infos {
+            position: relative;
+            width: 100%;
+            max-width: 750px;
+            .title {
+                font-size: 34px;
+            }
+            .release {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: var(--primary-grey);
+                font-size: 12px;
+                font-style: italic;
+            }
+        }
+        .image {
+            margin-right: 30px;
+            position: relative;
+            height: 350px;
+            width: 350px;
+            max-width: 350px;
+            img {
+                height: 350px;
+                width: 350px;
+                max-width: 350px;
+            }
+            .actions {
+                position: absolute;
+                display: flex;
+                bottom: 10px;
+                left: 10px;
+                .action {
+                    box-shadow: 0 1px 6px #19192217;
+                }
+            }
+            .hearth-btn {
+                cursor: pointer;
+                height: 64px;
+                width: 64px;
+                border-radius: 50%;
+                background-color: white;
+                text-align: center;
+                display: block;
+                &::before {
+                    line-height: 64px;
+                    color: black;
+                    font-size: 20px;
+                }
+            }
+        }
+        .title,
+        .artist {
+            margin-bottom: 45px;
+        }
+
+        .artist {
+            display: flex;
+            align-items: center;
+            img {
+                border-radius: 50% !important;
+                margin-right: 15px;
+                width: 42px;
+                height: 42px;
+                min-width: 42px;
+            }
+        }
+    }
+}

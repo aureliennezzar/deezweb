@@ -1,0 +1,57 @@
+h2.error {
+    text-align: center;
+}
+.favs {
+    padding-bottom: 100px;
+    .audio-player {
+        border-top: 1px solid rgb(238, 238, 238);
+        padding: 20px 120px;
+        position: fixed;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @media (max-width:768px){
+            padding: 20px 60px;
+
+        }
+        @media (max-width: 576px) {
+            padding: 20px 30px;
+        }
+        @media (max-width: 420px) {
+            padding: 20px 15px;
+        }
+        .controller {
+            .volume {
+                margin-left: 20px;
+                position: relative;
+                &:hover {
+                    div {
+                        display: block;
+                    }
+                }
+                div {
+                    position: absolute;
+                    padding: 5px 0;
+                    width: 130px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -40px;
+                    display: none;
+                    height: 40px;
+                }
+                @media (max-width: 576px) {
+                    div {
+                        left: -225% !important;
+                    }
+                }
+            }
+            .control {
+                margin: 0 15px;
+            }
+            .forward {
+                margin-right: 20px;
+            }
+        }
+    }
+}
